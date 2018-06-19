@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item   android:id="@+id/item_cancelar"
+        android:title="Cancelar"
+        android:orderInCategory="300"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_cancel"/>
+
+    <item   android:id="@+id/item_privacidade"
+        android:title="Privacidade"
+        android:orderInCategory="301"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_public"/>
+
+    <item   android:id="@+id/item_enviar"
+        android:title="Enviar"
+        android:orderInCategory="302"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_send"/>
+
+</menu>

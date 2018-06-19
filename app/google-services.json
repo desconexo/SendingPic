@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "329165631481",
+    "firebase_url": "https://sedingpic.firebaseio.com",
+    "project_id": "sedingpic",
+    "storage_bucket": "sedingpic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329165631481:android:0417bf13749f9b86",
+        "android_client_info": {
+          "package_name": "com.sendingpic.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "329165631481-3apt9dcpgfmrvggu1h0uo8r07o5hf3pr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sendingpic.app",
+            "certificate_hash": "44246550c1d887e0b558124e6d9d5616128ad6ee"
+          }
+        },
+        {
+          "client_id": "329165631481-c4p8la8oc9054h3priodjejfc2c44oeq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBevI-4T4eX9IWjBqdGmPtBTlaQuGFcV2s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "329165631481-c4p8la8oc9054h3priodjejfc2c44oeq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

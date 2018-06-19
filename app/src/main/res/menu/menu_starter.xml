@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu   xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" tools:context=".activity.MainActivity">
+
+        <item   android:id="@+id/item_galeria"
+            android:title="Adicionar Foto"
+            android:orderInCategory="300"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/ic_add_a_photo"/>
+
+        <item   android:id="@+id/item_pesquisa"
+            android:title="Pesquisar"
+            android:orderInCategory="301"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/ic_search"/>
+
+        <item   android:id="@+id/item_configuracoes"
+            android:title="Configurações"
+            android:orderInCategory="302"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/ic_settings"/>
+
+</menu>
