@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.jgabrielfreitas.core.BlurImageView;
 import com.sendingpic.app.R;
 import com.sendingpic.app.config.ConfiguracaoFirebase;
