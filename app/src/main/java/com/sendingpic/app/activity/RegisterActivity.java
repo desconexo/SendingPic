@@ -113,13 +113,17 @@ public class RegisterActivity extends AppCompatActivity {
                     usuario.setEmail(edtEmail.getText().toString());
                     usuario.setUsuario(edtApelido.getText().toString());
                     usuario.setSecretPass(Base64Custom.codificar(edtSecretPass.getText().toString()));
-                    enviaFoto(usuario);
+                    usuario.setImageUrl(mAuth.getCurrentUser().getPhotoUrl().toString());
+                    usuario.salvar();
+                    startActivity(new Intent(RegisterActivity.this, StarterActivity.class));
+                    finish();
                 }
 
             }
         });
     }
 
+    /*
     private void enviaFoto(final Usuario user){
         StorageReference storageReference = mStorage.child("profile_images").child(user.getId()).child(user.getLocalImageUri().getLastPathSegment());
         storageReference.putFile(user.getLocalImageUri()).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -140,7 +144,9 @@ public class RegisterActivity extends AppCompatActivity {
                 mAuth.signOut();
             }
         });
+
     }
+    */
 
     @Override
     protected void onStart() {

@@ -41,6 +41,7 @@ public class ValidationActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(firebaseAuth.getCurrentUser() == null){
                     startActivity(new Intent(ValidationActivity.this, MainActivity.class));
+                    finish();
                 }
             }
         };
@@ -61,13 +62,16 @@ public class ValidationActivity extends AppCompatActivity {
                     try {
                         if (!usuario.getEmail().equals(null)) {
                             startActivity(new Intent(ValidationActivity.this, StarterActivity.class));
+                            finish();
                             //DEU, MANDAR PRA PÁGINA QUE PEDE O CÓDIGO DE SEGURANÇA
                         }
                     }catch (NullPointerException e){
                         startActivity(new Intent(ValidationActivity.this, RegisterActivity.class));
+                        finish();
                     }
                 }catch (NullPointerException e){
                     startActivity(new Intent(ValidationActivity.this, RegisterActivity.class));
+                    finish();
                 }
                 usuario = null;
             }

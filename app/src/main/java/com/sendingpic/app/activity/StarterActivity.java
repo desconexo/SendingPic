@@ -79,8 +79,10 @@ public class StarterActivity extends AppCompatActivity {
                 return true;
             case R.id.item_galeria:
                 startActivity(new Intent(StarterActivity.this, NewPhotoActivity.class));
+                return true;
             case R.id.item_configuracoes:
                 mAuth.signOut();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
