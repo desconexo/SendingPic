@@ -20,8 +20,11 @@ import com.sendingpic.app.config.ConfiguracaoFirebase;
 import com.sendingpic.app.model.Notificacao;
 import com.sendingpic.app.model.Seguindo;
 import com.sendingpic.app.model.Usuario;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SeguindoAdapter extends ArrayAdapter<Seguindo> {
 
@@ -31,6 +34,7 @@ public class SeguindoAdapter extends ArrayAdapter<Seguindo> {
     private Context context;
     private TextView tv_no_followers;
     private TextView username;
+    private CircleImageView profileImage;
 
     private DatabaseReference mDatabase;
     private ValueEventListener valueEventListener;
@@ -54,6 +58,7 @@ public class SeguindoAdapter extends ArrayAdapter<Seguindo> {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.perfil_seguido, parent, false);
             username = view.findViewById(R.id.username_profile);
+            profileImage = view.findViewById(R.id.profile_image_follower);
 
             Seguindo seguindo = seguidores.get(position);
 
@@ -65,6 +70,7 @@ public class SeguindoAdapter extends ArrayAdapter<Seguindo> {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     if(dataSnapshot.exists()){
                         Usuario usuarioRecebido = dataSnapshot.getValue(Usuario.class);
+                        Picasso.with(context).load(usuarioRecebido.getImageUrl()).into(profileImage);
                         username.setText(usuarioRecebido.getUsuario());
                     }
                 }

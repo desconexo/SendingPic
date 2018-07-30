@@ -1,6 +1,7 @@
 package com.sendingpic.app.model;
 
 import android.content.Context;
+import android.net.Uri;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -16,6 +17,8 @@ public class Usuario {
     private String usuario;
     private String email;
     private String secretPass;
+    private String imageUrl;
+    private Uri localImageUri;
 
     public Usuario(){
 
@@ -56,5 +59,22 @@ public class Usuario {
 
     public void setSecretPass(String secretPass) {
         this.secretPass = secretPass;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    @Exclude
+    public Uri getLocalImageUri() {
+        return localImageUri;
+    }
+
+    public void setLocalImageUri(Uri localImageUri) {
+        this.localImageUri = localImageUri;
     }
 }
