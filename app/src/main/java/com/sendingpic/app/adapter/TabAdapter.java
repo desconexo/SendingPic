@@ -11,9 +11,8 @@ import android.text.Spanned;
 import android.text.style.ImageSpan;
 
 import com.sendingpic.app.R;
-import com.sendingpic.app.fragment.OptionsFragment;
 import com.sendingpic.app.fragment.PerfilFragment;
-import com.sendingpic.app.fragment.TimelineFragment;
+import com.sendingpic.app.fragment.HomeFragment;
 
 /**
  * Created by feeri on 12/03/2018.
@@ -23,7 +22,7 @@ public class TabAdapter extends FragmentStatePagerAdapter {
 
     private Context context;
     //private String[] tituloAbas = new String[]{"TIME LINE", "OPÇÕES", "PERFIL"};
-    private int[] icones = new int[]{R.drawable.ic_action_home, R.drawable.ic_notifications, R.drawable.ic_person};
+    private int[] icones = new int[]{R.drawable.ic_action_home, R.drawable.ic_person};
     private int tamanhoIcone;
 
     public TabAdapter(FragmentManager fm, Context c) {
@@ -39,12 +38,9 @@ public class TabAdapter extends FragmentStatePagerAdapter {
 
         switch (position){
             case 0:
-                fragment = new TimelineFragment();
+                fragment = new HomeFragment();
                 break;
             case 1:
-                fragment = new OptionsFragment();
-                break;
-            case 2:
                 fragment = new PerfilFragment();
                 break;
         }

@@ -6,6 +6,7 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="notification_description">Publicou uma nova foto</string>
     <string name="notification_tv">Sua lista de notificações está vazia ou não foi possível carregá-la.</string>
+    <string name="home_no_followers">Você não segue ninguém ainda.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

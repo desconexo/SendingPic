@@ -2,12 +2,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sendingpic.app.fragment.TimelineFragment">
+    tools:context="com.sendingpic.app.fragment.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:id="@+id/tv_no_followers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fragmento Timeline" />
+        android:text="@string/home_no_followers" />
+
+    <ListView
+        android:id="@+id/lv_followers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
 
 </FrameLayout>
