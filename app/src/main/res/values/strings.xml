@@ -7,6 +7,10 @@
     <string name="notification_description">Publicou uma nova foto</string>
     <string name="notification_tv">Sua lista de notificações está vazia ou não foi possível carregá-la.</string>
     <string name="home_no_followers">Você não segue ninguém ainda.</string>
+    <string name="follow">SEGUIR</string>
+    <string name="following">SEGUINDO</string>
+    <string name="report">DENUNCIAR</string>
+    <string name="followers">SEGUIDORES</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
