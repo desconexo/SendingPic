@@ -1,6 +1,7 @@
 package com.sendingpic.app.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 import com.sendingpic.app.R;
+import com.sendingpic.app.activity.ProfileActivity;
 import com.sendingpic.app.config.ConfiguracaoFirebase;
 import com.sendingpic.app.model.Notificacao;
 import com.sendingpic.app.model.Seguindo;
@@ -30,7 +32,6 @@ public class SeguindoAdapter extends ArrayAdapter<Seguindo> {
 
     private ArrayList<Seguindo> seguidores;
     private ArrayList<Usuario> usuarios;
-    private ArrayAdapter adapter;
     private Context context;
     private TextView tv_no_followers;
     private TextView username;
@@ -60,7 +61,7 @@ public class SeguindoAdapter extends ArrayAdapter<Seguindo> {
             username = view.findViewById(R.id.username_profile);
             profileImage = view.findViewById(R.id.profile_image_follower);
 
-            Seguindo seguindo = seguidores.get(position);
+            final Seguindo seguindo = seguidores.get(position);
 
             mDatabase = ConfiguracaoFirebase.getFirebase();
             DatabaseReference pesquisa = mDatabase.child("usuarios").child(seguindo.getIdConta());
@@ -81,6 +82,15 @@ public class SeguindoAdapter extends ArrayAdapter<Seguindo> {
                 }
             });
 
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(context, ProfileActivity.class);
+                    i.putExtra("id", seguindo.getIdConta());
+                    getContext().startActivity(i);
+                }
+            });
+
         }else{
             int visible = 0;
             tv_no_followers.setVisibility(visible);
@@ -88,4 +98,6 @@ public class SeguindoAdapter extends ArrayAdapter<Seguindo> {
 
         return view;
     }
+
+
 }

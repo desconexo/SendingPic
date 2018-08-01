@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">SendingPic</string>
+    <string name="title_activity_starter">SendingPic</string>
     <string name="login_google">Entrar com Google</string>
     <string name="notification_description">Publicou uma nova foto</string>
     <string name="notification_tv">Sua lista de notificações está vazia ou não foi possível carregá-la.</string>

@@ -53,7 +53,6 @@ public class PerfilFragment extends Fragment {
         image_profile = view.findViewById(R.id.image_profile);
         profile_username = view.findViewById(R.id.profile_username);
         tv_follow = view.findViewById(R.id.tv_follow);
-        tv_report = view.findViewById(R.id.tv_report);
 
         DatabaseReference dadosUsuario = mDatabase.child("usuarios").child(mAuth.getUid());
 

@@ -22,19 +22,20 @@
             android:name=".activity.StarterActivity"
             android:label="@string/title_activity_starter"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activity.NewPhotoActivity"></activity>
+        <activity android:name=".activity.NewPhotoActivity" />
 
         <service android:name=".services.MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".services.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
-        <service android:name=".services.MyFirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-            </intent-filter>
-        </service>
+        <activity android:name=".activity.ProfileActivity"></activity>
     </application>
 
 </manifest>

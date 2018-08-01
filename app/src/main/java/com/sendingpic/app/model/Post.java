@@ -46,7 +46,7 @@ public class Post {
     public String getUsuarioId() {
         return usuarioId;
     }
-
+    @Exclude
     public void setUsuarioId(String usuarioId) {
         this.usuarioId = usuarioId;
     }
@@ -79,7 +79,7 @@ public class Post {
     public Uri getLocalImage() {
         return localImage;
     }
-
+    @Exclude
     public void setLocalImage(Uri localImage) {
         this.localImage = localImage;
     }
